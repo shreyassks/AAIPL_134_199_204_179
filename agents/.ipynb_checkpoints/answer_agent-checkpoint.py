@@ -7,7 +7,7 @@ from pathlib import Path
 from tqdm import tqdm
 from typing import List, Tuple, Dict, Any
 
-from .answer_model2 import AAgent
+from .answer_model import AAgent
 
 class AnsweringAgent(object):
     r"""Agent responsible for answering MCQ questions with confidence scoring"""

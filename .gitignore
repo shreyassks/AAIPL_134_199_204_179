@@ -1,4 +1,6 @@
 ckpt/
 outputs/
 .Trash-0/
-ipynb_checkpoints/
+.ipynb_checkpoints/
+assets/
+tutorial/
