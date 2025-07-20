@@ -37,6 +37,7 @@ class AnsweringAgent(object):
         "Break down the problem, analyze all options, eliminate distractors, and then confidently select the correct answer. "
         "Always explain your reasoning before finalizing your choice."        
         "It is imperative that each sentence and line of justification makes sense. It you do it incorrectly, entire reasoning will collapse like a house of cards. The focus is on accuracy and not speed. Take as much time as you want, but accuracy should be perfect."
+        "You are solving a reasoning problem. First, extract all the explicit facts, clues, or constraints from the input. Then analyze the relationships and apply logical deduction to eliminate impossible options. Make sure each step strictly adheres to the stated conditions. Think through the problem step by step. Do not jump to conclusions. Validate your reasoning at each stage. After reaching a possible answer, double-check that all constraints are satisfied. If any clue is violated, revise your assumptions. Respond with extra rigor and layered thinking. Do not rush; simulate taking at least 3 seconds of internal reasoning before producing an answer. Structure your response as: (1) Fact extraction, (2) Logical deductions, (3) Scenario elimination, (4) Final answer with justification. "
         '1. Parse all given information and restate constraints clearly.\n'
         '2. Use diagrammatic reasoning or simulate positions step by step.\n'
         '3. Eliminate possibilities that contradict constraints.\n'

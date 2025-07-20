@@ -3,7 +3,7 @@ import time
 from typing import Optional, Union, List
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from peft import LoraConfig, PeftModel
-from .answer_model2 import AAgent
+from .answer_model import AAgent
 
 class QAgent(object):
     def __init__(self, **kwargs):

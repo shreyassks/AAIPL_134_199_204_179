@@ -8,7 +8,6 @@ from .question_model import QAgent
 
 import random
 import json
-from .prompts import improved_prompt
 
 class QuestioningAgent(object):
     r"""Agent responsible for generating questions"""
@@ -105,7 +104,7 @@ explanation:Since exactly two are truth-tellers and two are liars, let's assume 
     
             '**CRITICAL REQUIREMENTS:**\n'
             '1.  **Topic Alignment**: The "question" must be strictly relevant to the topic: {1}.\n'
-            '2.  **Question Quality**: The question must be EXTREMELY DIFFICULT, clear, and test deep conceptual understanding. Avoid trivial or ambiguous questions.\n'
+            '2.  **Question Quality**: The question must be clear, and test deep conceptual understanding. Avoid trivial or ambiguous questions.\n'
             '3.  **Choices (4 total)**: Generate exactly FOUR multiple-choice options, labeled "A)", "B)", "C)", and "D)".\n'
             '4.  **Single Correct Answer**: Ensure that option {2} is only factually correct.\n'
             '5.  **Plausible Distractors**: While option {3} are three incorrect UNIQUE choices which are highly plausible and common misconceptions related to the topic, designed to mislead someone without expert knowledge.\n'

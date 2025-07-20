@@ -29,7 +29,7 @@ class AAgent(object):
         if self.tokenizer.pad_token is None:
             self.tokenizer.pad_token = self.tokenizer.eos_token
 
-        self.model = self._setup_model_with_adapter(base_model)        
+        self.model = self._setup_model_with_adapter(base_model)     
         self.model = self.model.eval()
 
     def _setup_model_with_adapter(self, base_model):
@@ -42,7 +42,7 @@ class AAgent(object):
 
         if self.adapter_type == 'sft' or self.adapter_type == 'grpo':
             print("Loading required adapter")
-            checkpoint_path = self.find_latest_checkpoint()
+            checkpoint_path = "/jupyter-tutorial/AAIPL_134_199_204_179/ckpt/sft/checkpoint-1600" #self.find_latest_checkpoint()
             if checkpoint_path is None:
                 print(f"No trained checkpoints found for {self.adapter_type}")
                 inference_model = base_model
@@ -57,8 +57,8 @@ class AAgent(object):
     def find_latest_checkpoint(self) -> Optional[str]:
         """Find the latest checkpoint in the output directory."""
 
-        output_dir = "/jupyter-tutorial/AAIPL_134_199_204_179/ckpt"
-        output_dir = os.path.join(output_dir, self.adapter_type)
+        output_dir = "/jupyter-tutorial/AAIPL_134_199_204_179/ckpt/sft/checkpoint-1600"
+        # output_dir = os.path.join(output_dir, self.adapter_type)
         
         checkpoint_pattern = re.compile(r'checkpoint-(\d+)')
         checkpoints = []
